@@ -45,7 +45,7 @@ int main(int argc, const char * argv[]) {
 
         NSLog(@"The Doctor conquered these villains: %@.", [villains componentsJoinedByString:@", "]);
 
-        // Creating Mutable arrays
+        // MARK: Mutable arrays
         NSMutableArray *villainsMutable = [villains mutableCopy];
         NSLog(@"The contents of villainsMutable is %@", villainsMutable);
         NSLog(@"The address of villains is: %p\nThe address of viallainsMutable is: %p", villains, villainsMutable);
@@ -66,8 +66,8 @@ int main(int argc, const char * argv[]) {
         NSArray *sorted = [villains sortedArrayUsingSelector:@selector(compare:)];
         NSLog(@"The sorted villains array looks like this: %@", sorted);
 
+        // MARK: 3 useful functional-programming--like methods
         /*
-         3 useful functional-like methods:
          makeObjectsPerformSelector <- runs a method on every element in the array
          enumerateObjectsUsingBlock <- blocks are like proto-closures from Swift
          filteredArrayUsingPredicate <- this "predicate" is like the one CoreData. It is used for filtering functionality like Swift's filter() method
