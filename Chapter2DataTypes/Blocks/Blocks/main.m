@@ -97,7 +97,7 @@ int main(int argc, const char * argv[]) {
         // TODO: What is a capture list in Swift? And how do they make strong reference cycles less ikely? -> Answer: it is [weak self] or [unowned self]
         // For Objective-C, to avoid a strong reference cycle you use a __weak qualifier
         /*
-         MyViewController * __weak weakFelf = self;
+         MyViewController * __weak weakSelf = self;
 
          NSString* (^myBlock)(void) = ^{
             return [weakSelf runSomeMethod];
