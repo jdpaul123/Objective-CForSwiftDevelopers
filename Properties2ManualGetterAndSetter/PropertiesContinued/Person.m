@@ -7,6 +7,7 @@
 
 #import "Person.h"
 
+// MARK: Manually Written Getter and Setters
 @implementation Person
 
 // Below I am creating a custom getter and setter and setting the ivar name manually

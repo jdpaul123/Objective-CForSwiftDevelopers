@@ -16,7 +16,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Person *person = [Person new];
-        // To perform indirect member access you use ->
+        // To perform indirect member access you use -> with an ivar
 //        person->name = @"Taylor"; // This is the ivar way
 //        [person setName:@"Taylor"]; // This is how to set a pure property
         person.name = @"Taylor"; // This is the syntactic sugar way to set a pure property.
