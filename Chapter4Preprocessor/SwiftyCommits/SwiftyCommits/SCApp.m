@@ -36,6 +36,8 @@
     for (NSDictionary *entry in json) {
         // pull interesting data into variables
         NSString *name = entry[@"commit"][@"author"][@"name"];
+        // In the case that there is no name, which is possible, we default to "Anonymous"
+        name = (name != nil) ? name : @"Anonymous";
         NSString *message = entry[@"commit"][@"message"];
 
         // remnove line breaks for easier reading

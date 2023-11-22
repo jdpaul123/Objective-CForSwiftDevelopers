@@ -56,11 +56,15 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "apple/"
+            argument = "swift"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "apple"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "apple/"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
