@@ -16,6 +16,15 @@ int main(int argc, const char * argv[]) {
             repo = [NSString stringWithCString:argv[1] encoding:NSUTF8StringEncoding];
         }
 
+        NSArray<NSString*> *splitRepoString = [repo componentsSeparatedByString:@"/"];
+        if (splitRepoString.count != 2 || [(NSString *)splitRepoString[0] length] <= 0 || [(NSString *)splitRepoString[1] length] <= 0) {
+            NSLog(@"The format for the repo argument should be a path two directories deep. Example: \"apple/swift\"");
+            NSLog(@"%@", splitRepoString);
+            exit(0);
+        } else {
+            NSLog(@"%@", splitRepoString);
+        }
+
         SCApp *app = [SCApp new];
         [app fetchCommitsForRepo:repo];
     }
