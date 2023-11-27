@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZQb-zK-dvC">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project31Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XB4-2k-ddw">
+                                <rect key="frame" x="5" y="79" width="810" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="il9-cv-SNB"/>
+                                </connections>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="v47-9g-6HD">
+                                <rect key="frame" x="0.0" y="118" width="820" height="1042"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XB4-2k-ddw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="GAz-u9-JQQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="v47-9g-6HD" secondAttribute="bottom" id="Jsc-NL-X5C"/>
+                            <constraint firstItem="v47-9g-6HD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="X9F-yY-bee"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XB4-2k-ddw" secondAttribute="trailing" constant="5" id="XSx-K4-N1s"/>
+                            <constraint firstItem="v47-9g-6HD" firstAttribute="top" secondItem="XB4-2k-ddw" secondAttribute="bottom" constant="5" id="dFH-p8-ZOp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v47-9g-6HD" secondAttribute="trailing" id="gkK-AH-UkI"/>
+                            <constraint firstItem="v47-9g-6HD" firstAttribute="top" secondItem="XB4-2k-ddw" secondAttribute="bottom" constant="5" id="juQ-jX-b2K"/>
+                            <constraint firstItem="XB4-2k-ddw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="pDN-6L-nuC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eWo-3f-A4x"/>
+                    <connections>
+                        <outlet property="addressBar" destination="XB4-2k-ddw" id="A3m-Xk-wb2"/>
+                        <outlet property="stackView" destination="v47-9g-6HD" id="QfY-lJ-RFd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798.29268292682923" y="-24.406779661016952"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="K75-Wq-BFf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZQb-zK-dvC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E1a-PF-nXq">
+                        <rect key="frame" x="0.0" y="24" width="820" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SBv-L6-f8h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BdN-ze-dTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41.707317073170728" y="-24.406779661016952"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
