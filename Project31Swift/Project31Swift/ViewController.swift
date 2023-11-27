@@ -91,7 +91,7 @@ class ViewController: UIViewController, WKNavigationDelegate, UITextFieldDelegat
             }
         }
 
-        // Make the keyboardhide
+        // Make the keyboard hide
         textField.resignFirstResponder()
         return true
     }
